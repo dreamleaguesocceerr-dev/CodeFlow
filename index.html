@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeFlow | Learn Coding, Python & JavaScript</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top left, #0d1224, #060912);
+      color: #e0e0ff;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #00e0ff;
+      text-shadow: 0 0 10px #00e0ff;
+    }
+
+    nav a {
+      color: #b0b3c2;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00e0ff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+    }
+
+    .glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: linear-gradient(45deg, #00e0ff, #5e00ff);
+      border-radius: 50%;
+      filter: blur(140px);
+      opacity: 0.4;
+      top: -80px;
+      right: -100px;
+      z-index: -1;
+      animation: float 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(20px); }
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      color: #ffffff;
+      text-shadow: 0 0 25px #00e0ff;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-top: 1.2rem;
+      color: #b8b9d4;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .search-box {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search-box input {
+      width: 60%;
+      max-width: 500px;
+      padding: 0.9rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 50px;
+      outline: none;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      box-shadow: 0 0 15px rgba(0, 224, 255, 0.4);
+      backdrop-filter: blur(6px);
+      transition: box-shadow 0.3s;
+    }
+
+    .search-box input:focus {
+      box-shadow: 0 0 25px rgba(0, 224, 255, 0.8);
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 5rem auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #00e0ff;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 15px #00e0ff;
+    }
+
+    .section p {
+      color: #b8b9d4;
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 0 25px rgba(0,224,255,0.05);
+      transition: all 0.4s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(0,224,255,0.4);
+    }
+
+    .card h3 {
+      color: #00e0ff;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      color: #c0c1d8;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #7e7f9a;
+      font-size: 0.9rem;
+      margin-top: 5rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+      .search-box input {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">CodeFlow</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Python</a>
+      <a href="#">JavaScript</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="glow"></div>
+    <h1>Welcome to CodeFlow</h1>
+    <p>Created by <strong>Cyberflux</strong> — your futuristic hub for mastering coding, Python, and JavaScript. Learn, build, and innovate in the world of code.</p>
+    <div class="search-box">
+      <input type="text" placeholder="Search everything about coding...">
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>What is Coding?</h2>
+    <p>
+      Coding is the art of telling computers what to do. It’s the foundation of all digital technology — from websites to AI.
+      With CodeFlow, you’ll explore how code transforms imagination into innovation through interactive tutorials and real-world examples.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Explore Programming Languages</h2>
+    <div class="topics">
+      <div class="card">
+        <h3>Python</h3>
+        <p>Learn Python — the beginner-friendly, powerful language used in AI, data science, and automation. Its clean syntax makes it perfect for new and advanced coders alike.</p>
+      </div>
+
+      <div class="card">
+        <h3>JavaScript</h3>
+        <p>Master JavaScript — the language that powers the web. Build interactive websites, applications, and dynamic interfaces that users love.</p>
+      </div>
+
+      <div class="card">
+        <h3>More Languages Coming Soon</h3>
+        <p>Stay tuned for more programming tutorials including HTML, CSS, C++, and more — all simplified for learners of every level.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Cyberflux | CodeFlow — Learn. Build. Innovate.
+  </footer>
+
+</body>
+</html>
