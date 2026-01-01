@@ -205,34 +205,36 @@
     <h1>Welcome to CodeFlow</h1>
     <p>Created by <strong>Cyberflux</strong> — your futuristic hub for mastering coding, Python, and JavaScript. Learn, build, and innovate in the world of code.</p>
     <div class="search-box">
-      <input type="text" placeholder="Search everything about coding...">
+      <input type="text" id="searchInput" placeholder="Search everything about coding...">
     </div>
   </section>
 
-  <section class="section">
-    <h2>What is Coding?</h2>
-    <p>
-      Coding is the art of telling computers what to do. It’s the foundation of all digital technology — from websites to AI.
-      With CodeFlow, you’ll explore how code transforms imagination into innovation through interactive tutorials and real-world examples.
-    </p>
-  </section>
-
-  <section class="section">
+  <section class="section" id="contentSection">
     <h2>Explore Programming Languages</h2>
-    <div class="topics">
-      <div class="card">
+    <div class="topics" id="topicList">
+      <div class="card" data-topic="coding">
+        <h3>Coding Basics</h3>
+        <p>Coding is the art of telling computers what to do. Learn how code forms the foundation of software, apps, and modern technology.</p>
+      </div>
+
+      <div class="card" data-topic="python">
         <h3>Python</h3>
-        <p>Learn Python — the beginner-friendly, powerful language used in AI, data science, and automation. Its clean syntax makes it perfect for new and advanced coders alike.</p>
+        <p>Python is beginner-friendly, powerful, and versatile — used in AI, automation, and data science. Explore why it’s a favorite among developers.</p>
       </div>
 
-      <div class="card">
+      <div class="card" data-topic="javascript js">
         <h3>JavaScript</h3>
-        <p>Master JavaScript — the language that powers the web. Build interactive websites, applications, and dynamic interfaces that users love.</p>
+        <p>JavaScript powers the modern web. Learn how it brings interactivity to websites and builds dynamic applications.</p>
       </div>
 
-      <div class="card">
-        <h3>More Languages Coming Soon</h3>
-        <p>Stay tuned for more programming tutorials including HTML, CSS, C++, and more — all simplified for learners of every level.</p>
+      <div class="card" data-topic="html css web">
+        <h3>Web Development</h3>
+        <p>HTML structures the web, CSS styles it, and JS makes it interactive. Discover how these three pillars work together to build modern websites.</p>
+      </div>
+
+      <div class="card" data-topic="ai machine learning">
+        <h3>AI & Machine Learning</h3>
+        <p>Dive into the future of tech — where code meets intelligence. Learn how Python powers AI innovations and predictive systems.</p>
       </div>
     </div>
   </section>
@@ -241,5 +243,22 @@
     © 2025 Cyberflux | CodeFlow — Learn. Build. Innovate.
   </footer>
 
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+
+    searchInput.addEventListener('keyup', function() {
+      const searchTerm = this.value.toLowerCase();
+      cards.forEach(card => {
+        const topic = card.dataset.topic.toLowerCase();
+        if (topic.includes(searchTerm)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
 </body>
-</html>
+  </html>
